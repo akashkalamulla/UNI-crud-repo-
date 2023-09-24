@@ -31,5 +31,8 @@ public class StudentServices {
         return repository.save(student);
     }
 
+    public Student updateStudent(Student student){
+        return repository.save(student);
+    }
 
 }

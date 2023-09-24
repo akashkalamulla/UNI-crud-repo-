@@ -28,4 +28,11 @@ public class StudentController {
     public Student CreateStudent(@RequestBody Student student){
         return services.createStudent(student);
     }
+
+    @PutMapping(path = "/students")
+    public Student updateStudent(@RequestBody Student student){
+        return services.updateStudent(student);
+    }
+
+
 }
