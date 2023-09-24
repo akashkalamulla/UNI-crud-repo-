@@ -27,5 +27,9 @@ public class StudentServices {
         return null;
     }
 
+    public Student createStudent(Student student){
+        return repository.save(student);
+    }
+
 
 }
