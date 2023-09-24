@@ -35,4 +35,8 @@ public class StudentServices {
         return repository.save(student);
     }
 
+    public String deleteStudent(int id){
+        repository.deleteById(id);
+        return "Lecture with id " + id + " has been successfully deleted";
+    }
 }

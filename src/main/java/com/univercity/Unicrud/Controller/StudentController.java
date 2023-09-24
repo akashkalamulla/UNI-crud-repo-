@@ -3,7 +3,6 @@ package com.univercity.Unicrud.Controller;
 import com.univercity.Unicrud.Data.Student;
 import com.univercity.Unicrud.Service.StudentServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.convert.Jsr310Converters;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,5 +33,8 @@ public class StudentController {
         return services.updateStudent(student);
     }
 
-
+    @DeleteMapping(path ="/students/{id}")
+    public String deleteStudent(@PathVariable int id){
+        return services.deleteStudent(id);
+    }
 }
